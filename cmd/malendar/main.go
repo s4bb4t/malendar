@@ -1,21 +1,15 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/s4bb4t/malendar/internal/calendar"
+	"github.com/s4bb4t/malendar/internal/commands"
+	"github.com/s4bb4t/malendar/internal/menu"
 )
 
 func main() {
-	calendar.Greeting()
-	fmt.Println("--------------------------------------------------------")
-	calendar.Commands()
-	fmt.Println("--------------------------------------------------------")
-	fmt.Print("user: ")
 
-	//scanner := bufio.NewScanner(os.Stdin)
-	//if scanner.Scan() {
-	//	input := scanner.Text()
-	//	fmt.Printf("Команда: %s\n", input)
-	//}
+	M := map[string]string{}
+
+	commands.InfoSet(M, "Name", "Jora")
+
+	menu.Menu(M)
 }

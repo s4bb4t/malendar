@@ -24,10 +24,10 @@ func (d *Day) SetPhase(phase Phase) {
 
 func (d *Day) Validate() bool {
 	if d.Date.Unix() != 0 {
-		return true
+		return false
 	}
 	if d.Phase == NonPhase || d.Phase == OvulationPhase || d.Phase == MenstrualPhase {
-		return true
+		return false
 	}
-	return false
+	return true
 }
